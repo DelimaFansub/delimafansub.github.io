@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+<div class="container">
+  {% include nav.html %}
+  <hr class="stylish"/>
+  {{ content }}
+</div>
+<footer>
+  <hr class="stylish"/>
+  <div>
+    &copy; 2016-{{ site.time | date: '%Y' }} | <a>{{ site.name }}</a> - Delsubs dan Fansub Imaji 
+  </div>
+</footer>
+{% if site.javascript_enabled %}
+  <script src="/assets/main.js"></script>
+{% endif %}
+</body>
+</html>

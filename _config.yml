@@ -1,0 +1,44 @@
+title : Delima
+name: 'Delima'
+description: 'Ngesub? Cuman hobi.'
+
+markdown: kramdown
+highlighter: rouge
+javascript_enabled: true
+
+featured_posts_title: Unrelated
+featured_posts:
+  - url: '#'
+    title: 'Featured post #1'
+  - url: '#'
+    title: 'Featured post #2'
+  - url: '#'
+    title: 'Featured post #3'
+
+collections:
+  news:
+    title: News
+    default_open: false
+    output: false
+  posts:
+    title: Rilisan
+    default_open: true
+    output: true
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      title: Rilisan
+      permalink: /rilisan/:title
+  - scope:
+      type: news
+    values:
+      title: News
+      permalink: /news/:title
+
+plugins:
+  - jekyll-sitemap
+
+disqus:
+  shortname: delimasubs
